@@ -196,12 +196,13 @@
               <div class="step">
                 <img src="assets/img/Emma2.gif" alt="Image" class="plane" data-aos="fade-right">
                 <span class="number">01</span>
-                <h3>Hand cash to teller</h3>
+                <h3>Purchase Moneda Gift Card</h3>
                 <h6>7-Eleven in LA, USA</h6>
                 <p>
-                  Margarita usually uses Western Union and pays about 8% to send money. So, for every $100 she sends, her daughter receives $92.
+                  Margarita usually uses Western Union and pays about 8% to send money. 
                   Today she decides to try a new service called Moneda, which promises to charge her only 4% to send up to $500 anywhere
-                  on earth.
+                  on earth. Using the Moneda App, she arranges to purchase a $100 Moneda Gift Card and have it sent to her daughter Luz. 
+                  She hands $104 in cash to the teller.
                 </p>
               </div>
             </div>
@@ -209,11 +210,11 @@
               <div class="step">
                 <img src="assets/img/Charlie.gif" alt="Image" class="plane" data-aos="fade-left">
                 <span class="number">02</span>
-                <h3>Teller triggers payment</h3>
+                <h3>Teller triggers payment to Moneda Node</h3>
                 <h6>7-Eleven in LA, USA</h6>
                 <p>
-                  Margarita goes to her local 7-Eleven and provides her phone number and the number of the payee to the teller.
-                  She hands Juan $100 and he processes the remittance payment.
+                  The teller puts the $104 in the till and triggers a BTC/LN payment of $102 in bitcoin to Moneda. 
+                  <a href="https://strike.zaphq.io/" target="_blank">Strike</a> or similar would streamline payments from vendor bank account to Moneda's Lightning Node.
                 </p>
               </div>
             </div>
@@ -221,14 +222,11 @@
               <div class="step">
                 <img src="assets/img/ComputerMonitor.png" alt="Image" class="plane" data-aos="fade-right">
                 <span class="number">03</span>
-                <h3>LN Node sends payment</h3>
-                <h6>LN node in LA, USA</h6>
+                <h3>Moneda Node sends Moneda Digital Gift Card</h3>
+                <h6>LN node in OH, USA</h6>
                 <p>
-                  Moneda Network operates an LN node near LA. 
-                  Their node has just received a payment request. 
-                  The payment request is validated and a Bitcoin payment is sent.
-                  The node also sends an API request to a local Bitcoin exchange in order to buy a matching amount of Bitcoin.
-                  At the end of the day, 7-Eleven sends a bank transfer to Moneda Network less their fee.
+                  The LN bitcoin payment from the 7-Eleven teller is received and the Moneda Node sends a Moneda Gift Card (fungible token, using <a href="https://rgb-org.github.io/" target="_blank">RGB Protocol</a> over LN) to Luz's phone.
+                  The Moneda Node also sends an API request to a Bitcoin exchange in order to buy a hedging trade (short $100 in BTC).
                 </p>
               </div>
             </div>
@@ -240,43 +238,42 @@
           <div class="row">
             <div class="col-md-4">
               <div class="step">
-                <img src="assets/img/Laptop.png" alt="Image" class="plane" data-aos="fade-right">
-                <span class="number">04</span>
-                <h3>LN payment received</h3>
-                <h6>LN node in GDL, Mexico</h6>
-                <p>
-                  Moneda Network also operates an LN node in Guadalajara, Mexico. 
-                  When the payment from California posts, the node pushes an alert message out to the preselected 7-Eleven location where the funds are available.
-                  The node also sends an API request to a local Bitcoin exchange in order to sell a matching amount of Bitcoin.
-                  At the end of the day, Moneda Network sends a bank transfer to 7-Eleven in Mexico for the payment amount.
-                </p>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="step">
-                <img src="assets/img/Chuck.gif" alt="Image" class="plane" data-aos="fade-left">
-                <span class="number">05</span>
-                <h3>Teller is notified</h3>
-                <h6>7-Eleven in GDL, Mexico</h6>
-                <p>
-                  At the 7-Eleven in Guadalajara, Jesus, the teller, receives an alert on the Moneda Merchant App that money has been received
-                  for Luz.
-                </p>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="step">
                 <img src="assets/img/Jane.gif" alt="Image" class="plane" data-aos="fade-right">
-                <span class="number">06</span>
-                <h3>Cash handed to payee</h3>
-                <h6>7-Eleven in GDL, Mexico</h6>
+                <span class="number">04</span>
+                <h3>Moneda Gift Card is received</h3>
+                <h6>Home in GDL, Mexico</h6>
                 <p>
-                  Luz receives a text message with a payment code and some details on a cash transfer now
-                  available at the local 7-Eleven. She walks in and shows the payment code to the teller.
-                  Jesus scans the code and hands Luz 2,362 pesos.
+                  Luz receives an alert on her phone that she just received a $100 Moneda Gift Card. 
+                  She opens the Moneda App and finds a local 7-Eleven where she can redeem the card for $100 worth of pesos. 
                 </p>
               </div>
             </div>
+            <div class="col-md-4">
+              <div class="step">
+                <img src="assets/img/Chuck.gif" alt="Image" class="plane" data-aos="fade-right">
+                <span class="number">05</span>
+                <h3>Luz gets her cash</h3>
+                <h6>7-Eleven in GDL, Mexico</h6>
+                <p>
+                  Luz walks in, scans the 7-Eleven teller's Moneda Merchant App LN invoice, and sends the Moneda Gift Card to 7-Eleven.
+                  The teller sees that the Moneda Gift Card has been transfered to 7-Eleven's LN wallet and hands 2,362 pesos to Luz. 
+                  The teller then sends the Moneda Gift Card to the Moneda Node to sell it for LN bitcoin.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="step">
+                <img src="assets/img/Laptop.png" alt="Image" class="plane" data-aos="fade-left">
+                <span class="number">06</span>
+                <h3>Moneda sends LN bitcoin to 7-Eleven</h3>
+                <h6>LN Node in GDL, Mexico</h6>
+                <p>
+                  Moneda receives the $100 Moneda Gift Card and sends $100 in LN bitcoin to 7-Eleven's Node in Mexico.
+                  When the payment from Ohio posts, the 7-Eleven Node keeps half of the value in Bitcoin and sends $50 worth to an exchange to sell for pesos.
+                </p>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
@@ -298,7 +295,7 @@
                 <h3 class="mb-3">LN Node Operators</h3>
                 <p>
                   Already running a well-managed LN node? Join up as a Moneda Network franchisee, help
-                  connect your local community to Bitcoin, and earn around 2% when
+                  connect your local community to Bitcoin, and earn around 1% when
                   originating LN payments for Moneda Network.
                 </p>
               </div>
